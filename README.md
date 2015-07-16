@@ -9,5 +9,5 @@ Dependency:
 
 
 [Robot Framework (Python 3)]: https://github.com/userzimmermann/robotframework/tree/python3
-[Keyword documentation]: http://rmerkushin.github.io/robotframework-http/doc/HTTP.html
+[Keyword documentation]: http://rmerkushin.github.io/robotframework-http/doc/HTTP.htm
 [Python requests library]: https://pypi.python.org/pypi/requests/
