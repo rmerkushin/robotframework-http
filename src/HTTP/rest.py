@@ -47,7 +47,7 @@ class REST(object):
         | params | request parameters |
         | headers | custom headers for request, rewrites session headers |
         | cookies | custom request cookies |
-        | timeout | response timeout, raise exception on request timeout |
+        | timeout | response timeout in seconds, raise exception on request timeout |
 
         Example usage:
         | ${payload} | Create Dictionary | param1 | value1 | param2 | value2 |
@@ -71,13 +71,18 @@ class REST(object):
         except ValueError:
             return {"status": response.status_code, "headers": response.headers, "body": response.content}
 
-    def post(self, alias, url, headers=None, data=None, files=None, cookies=None, timeout=10):
+    def post(self, alias, url, headers=None, cookies=None, data=None, files=None, timeout=10):
         """
         Sends POST request.
 
         Arguments:
+        | alias | session alias |
+        | url | service url |
+        | headers | custom headers for request, rewrites session headers |
+        | cookies | custom request cookies |
         | data | dictionary, bytes, or file-like object to send in the body of the request |
         | files | dictionary of 'name': file-like-objects (or {'name': ('filename', fileobj)}) for multipart encoding upload |
+        | timeout | response timeout in seconds, raise exception on request timeout |
 
         Example usage:
         | @{files} | Set Variable | path_to_file_1 | path_to_file_2 |
