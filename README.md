@@ -5,8 +5,7 @@
 Dependency:
 -----------
 
-[Robot Framework (Python 3)]
-[Python requests library]
+[Robot Framework (Python 3)], [Python requests library]
 
 
 [Robot Framework (Python 3)]: https://github.com/userzimmermann/robotframework/tree/python3
